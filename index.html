@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Book Marker</title>
+    <link rel="icon" type="image/x-icon" href="bookmark.png">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/alert-style.css">
+    <link rel="stylesheet" href="css/index-style.css">
+</head>
+<body>
+    
+    <section class="py-5 main position-relative">
+        <div class="container d-flex flex-column justify-content-center align-items-center">
+            <h1 class="py-2 position-relative my-hover">Bookmarker</h1>
+            <div class="bookmarker-body p-3 py-4 mt-5 w-100 d-flex flex-column justify-content-center align-items-center gap-4">
+                <h2>
+                    <i class="fa-solid fa-bookmark first"></i>
+                        Bookmark your favorite sites
+                    <i class="fa-solid fa-bookmark second"></i>
+                </h2>
+      
+                <div class="site-name w-100 d-flex flex-column justify-content-center" >
+                    <label for="bookmarkName" class="fw-semibold pb-2 pt-2">
+                        <i class="fa-solid fa-book-bookmark pe-2"></i>
+                        Site Name
+                    </label>
+                    <input type="text" placeholder="Bookmark Name" class="form-control is-invalid" id="bookmarkName" wfd-id="id0">
+                    <div class="invalid-feedback">Site name must contain at least 3 characters</div>
+                    <div class="valid-feedback">Done</div>
+                </div>
+                <div class="site-url w-100 d-flex flex-column justify-content-center" >
+                    <label for="bookmarkURL" class="fw-semibold pb-2 pt-2">
+                        <i class="fa-solid fa-link pe-2"></i>
+                        Site URL
+                    </label>
+                    <input type="text" placeholder="Website URL" class="form-control is-invalid" id="bookmarkURL" wfd-id="id0">
+                    <div class="invalid-feedback">Enter Valid URL</div>
+                    <div class="valid-feedback">Done</div>
+                </div>
+
+                <button class="btn btn-danger px-5" id="submitBtn">Submit</button>
+            </div>
+
+
+            <div class="site-name w-50 d-flex flex-column justify-content-center py-3" >
+                <label for="bookmarkName" class="fw-semibold pb-2 pt-2">
+                    <i class="fas fa-search"></i>
+                    Search Site
+                </label>
+                <input oninput="searchSite(this.value)" type="text" placeholder="Enter Bookmark Name" class="form-control" id="searchSite" wfd-id="id0">
+            </div>
+            
+
+            <table class="table mt-4 text-center bg-light">
+                <thead>
+                  <tr><th class="text-capitalize">index</th>
+                  <th class="text-capitalize">Website Name</th>
+                  <th class="text-capitalize">Visit</th>
+                  <th class="text-capitalize">Delete</th>
+                </tr></thead>
+                <tbody id="tableContent"></tbody>
+                
+              </table>
+        </div> 
+    </section>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/sweetalert.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
